@@ -1,0 +1,20 @@
+{
+  "name": "excel-google-sheets-formula-generator",
+  "displayName": "Excel & Google Sheets formula generator",
+  "version": "0.1.0",
+  "description": "Turn plain words into ready Excel formulas and Google Sheets formulas. Describe the task and get one working formula with a simple explanation of each part.",
+  "author": {
+    "name": "Kanat Bizhanov",
+    "url": "https://sheetsai.pro"
+  },
+  "homepage": "https://sheetsai.pro/?utm_source=claude&utm_medium=plugin_card",
+  "repository": "https://github.com/Kanat12345/ai-plugins",
+  "license": "MIT",
+  "keywords": [
+    "excel",
+    "google-sheets",
+    "formulas",
+    "spreadsheet"
+  ],
+  "icon": "./assets/logo.png"
+}
