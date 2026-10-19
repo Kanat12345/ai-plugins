@@ -9,6 +9,7 @@
   },
   "homepage": "https://sheetsai.pro/?utm_source=claude&utm_medium=plugin_card",
   "repository": "https://github.com/Kanat12345/ai-plugins",
+  "privacyPolicyUrl": "https://github.com/Kanat12345/ai-plugins/blob/main/excel-google-sheets-formula-generator/PRIVACY.md",
   "license": "MIT",
   "keywords": [
     "excel",
