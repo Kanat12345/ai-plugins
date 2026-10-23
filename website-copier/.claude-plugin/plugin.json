@@ -10,6 +10,8 @@
   "homepage": "https://websitecopier.app/?utm_source=claude&utm_medium=plugin_card",
   "repository": "https://github.com/Kanat12345/ai-plugins",
   "privacyPolicyUrl": "https://websitecopier.app/privacy/",
+  "supportUrl": "https://websitecopier.app/support/",
+  "termsOfServiceUrl": "https://websitecopier.app/terms/",
   "license": "MIT",
   "keywords": [
     "website",
