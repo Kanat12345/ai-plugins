@@ -62,23 +62,6 @@ def blocked_exit(host):
     sys.exit(1)
 
 
-def proxy_settings():
-    """The sandbox proxy from the environment, in Playwright's format (Chromium does not read these variables)."""
-    p = (os.environ.get('HTTPS_PROXY') or os.environ.get('https_proxy') or os.environ.get('HTTP_PROXY')
-         or os.environ.get('http_proxy'))
-    if not p:
-        return None
-    u = urllib.parse.urlparse(p if '://' in p else 'http://' + p)
-    s = {'server': '%s://%s:%s' % (u.scheme or 'http', u.hostname, u.port or 80)}
-    if u.username:
-        s['username'] = urllib.parse.unquote(u.username)
-        s['password'] = urllib.parse.unquote(u.password or '')
-    bypass = os.environ.get('NO_PROXY') or os.environ.get('no_proxy')
-    if bypass:
-        s['bypass'] = bypass
-    return s
-
-
 # runs in the page before it is taken: pop-up dialogs and full-screen overlays go, scrolling is allowed again
 CLOSE_POPUPS_JS = r"""() => {
   const area = window.innerWidth * window.innerHeight;
@@ -141,11 +124,7 @@ def render(url):
     from playwright.sync_api import sync_playwright
     deadline = time.time() + RENDER_BUDGET
     with sync_playwright() as pw:
-        kw = {'headless': True, 'args': ['--disable-dev-shm-usage']}
-        px = proxy_settings()
-        if px:
-            kw['proxy'] = px
-        browser = pw.chromium.launch(**kw)
+        browser = pw.chromium.launch(headless=True, args=['--disable-dev-shm-usage'])
         try:
             ctx = browser.new_context(user_agent=UA, viewport={'width': 1440, 'height': 900}, locale='en-US',
                                       ignore_https_errors=True, service_workers='block')
