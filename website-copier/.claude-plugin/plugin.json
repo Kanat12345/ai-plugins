@@ -1,0 +1,22 @@
+{
+  "name": "website-copier",
+  "displayName": "Website Copier",
+  "version": "0.1.0",
+  "description": "Save any web page as one offline HTML file with its images, styles and fonts inside. Paste a link and get a file that opens without internet.",
+  "author": {
+    "name": "Kanat Bizhanov",
+    "url": "https://websitecopier.app"
+  },
+  "homepage": "https://websitecopier.app/?utm_source=claude&utm_medium=plugin_card",
+  "repository": "https://github.com/Kanat12345/ai-plugins",
+  "privacyPolicyUrl": "https://websitecopier.app/privacy/",
+  "license": "MIT",
+  "keywords": [
+    "website",
+    "webpage",
+    "offline",
+    "html",
+    "download"
+  ],
+  "icon": "./assets/logo.png"
+}
