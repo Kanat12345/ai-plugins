@@ -38,7 +38,7 @@ If access is off, the plugin tells you how to turn it on instead of saving the p
 
 ## How it works
 
-The plugin contains one skill with instructions for Claude and one Python script. In Claude's code sandbox the script opens the page in a headless browser, scrolls it so lazy parts load, closes pop-ups and takes the page as the browser drew it. Then it removes the page scripts and puts every picture, stylesheet and font into the file. If no browser is available, it downloads the page directly.
+The plugin contains one skill: instructions for Claude with a Python script inside (the "Program" section of SKILL.md). Claude copies the script out of the skill file into its code sandbox with one command and runs it. The script opens the page in a headless browser, scrolls it so lazy parts load, closes pop-ups and takes the page as the browser drew it. Then it removes the page scripts and puts every picture, stylesheet and font into the file. If no browser is available, it downloads the page directly.
 
 The plugin has no servers and no connectors. The pages you save are not sent to the plugin author.
 
